@@ -46,7 +46,7 @@ public class Main {
             int contador_linhas = 0;
 
             while((linha_atual = buff.readLine()) != null) {
-                if (linha_atual == antiga) {
+                if (linha_atual.equals(antiga)) {
                     linha_atual = nova;
                 }
                 linhas[contador_linhas] = linha_atual;
@@ -66,7 +66,7 @@ public class Main {
             int contador_linhas = 0;
 
             while((linha_atual = buff.readLine()) != null) {
-                if (linha_atual != deletar) {
+                if (!linha_atual.equals(deletar)) {
                     linhas[contador_linhas] = linha_atual;
                     ++contador_linhas;
                 }
